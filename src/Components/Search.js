@@ -1,19 +1,23 @@
 import React from 'react';
-import Button from './Button';
 
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue:""
+      inputValue: '',
     };
   }
+  handleInputChang = ({ target: { value } }) => {
+    this.setState({
+      inputValue: value,
+    });
+  };
   render() {
-    const {inputValue}=this.setState
-    return <div>
-        <input value={inputValue}/>
-        <Button text= "Search"/>
-        
-    </div>;
+    const { inputValue } = this.setState;
+    return (
+      <div>
+        <input onChange={this.handleInputChang} value={inputValue} />
+      </div>
+    );
   }
 }

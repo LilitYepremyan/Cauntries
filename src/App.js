@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
-import Search from './Components/Search';
-import Countries from './Components/Countries';
+
+
+import Countries from './Components/Countries/Countries';
 
 function App() {
   return (
     <div className="App">
-      <Search />
       <Countries />
     </div>
   );
