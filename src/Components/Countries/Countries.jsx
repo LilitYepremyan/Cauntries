@@ -41,7 +41,7 @@ export default class Countries extends React.Component {
   };
 
   render() {
-    const { countries, results, error, isEmpty } = this.state;
+    const { countries, results, isEmpty } = this.state;
     const err = isEmpty ? null : <p>There is no such country</p>;
     return countries.length ? (
       <>
@@ -52,7 +52,7 @@ export default class Countries extends React.Component {
             {results.map((c) => {
               return (
                 <div className={styles.countriesContainer}>
-                  <img src={c.flag} />
+                  <img src={c.flag} alt="flag" />
                   <p>{c.name}</p>
                 </div>
               );
